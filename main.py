@@ -11,11 +11,11 @@ import copy
 import time
 
 GRID_SIZE = 48
-
+TILE_SIZE = 8
 
 class SSGrid:
     def __init__(self, config):
-        self.TILE_SIZE = 8
+        self.TILE_SIZE = TILE_SIZE
         self.GRID = []
         self.entities = []
 
@@ -313,7 +313,7 @@ def runPyGame():
     fpsClock = pygame.time.Clock()
 
     # Set up the window.
-    width, height = 640, 480
+    width, height = GRID_SIZE * TILE_SIZE, GRID_SIZE * TILE_SIZE
     screen = pygame.display.set_mode((width, height))
 
     # screen is the surface representing the window.
